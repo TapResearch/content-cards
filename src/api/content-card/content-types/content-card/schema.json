@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "content_cards",
+  "info": {
+    "singularName": "content-card",
+    "pluralName": "content-cards",
+    "displayName": "contentCard",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 125
+    },
+    "isNew": {
+      "type": "boolean",
+      "default": true
+    },
+    "contentGroups": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::content-group.content-group",
+      "inversedBy": "contentCards"
+    },
+    "sdkVersions": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sdk-version.sdk-version",
+      "inversedBy": "contentCards"
+    },
+    "usageSuggestion": {
+      "type": "text",
+      "maxLength": 275
+    },
+    "moreInformation": {
+      "type": "text",
+      "maxLength": 375
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "content_groups",
+  "info": {
+    "singularName": "content-group",
+    "pluralName": "content-groups",
+    "displayName": "contentGroup"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "contentCards": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::content-card.content-card",
+      "mappedBy": "contentGroups"
+    }
+  }
+}

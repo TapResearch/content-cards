@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sdk_versions",
+  "info": {
+    "singularName": "sdk-version",
+    "pluralName": "sdk-versions",
+    "displayName": "sdkVersion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "version_tag": {
+      "type": "string"
+    },
+    "contentCards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::content-card.content-card",
+      "mappedBy": "sdkVersions"
+    }
+  }
+}
